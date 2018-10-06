@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>播放器滚动切换及拖拽</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 2000px;
+      background-color: tomato;
+    }
+
+    #anchor {
+      height: 360px;
+      width: 100%;
+      background-color: #F0F0F0;
+    }
+    .video {
+      width: 640px;
+      height: 360px;
+      margin: 0 auto;
+      background-color: black;
+    }
+    .video-fixed {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 320px;
+      height: 150px;
+      cursor: all-scroll;
+    }
+    .masker {
+      display: none;
+    }
+    .masker:hover {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 180px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.0.1/Rx.js"></script>
+</head>
+<body>
+  <div id="anchor">
+    <div class="video" id="video">
+      <div class="masker"></div>
+      <video width="100%" controls>
+        <source src="http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
