@@ -19,9 +19,8 @@ scroll$
   })
 
 mouseDown$
-// 如果处于fixed状态才执行后续
+  // 如果处于fixed状态才执行后续
   .filter(e => video.classList.contains('video-fixed'))
-  //
   .map(e => mouseMove$.takeUntil(mouseUp$))
   .concatAll()
   // 与mousedown组合执行
