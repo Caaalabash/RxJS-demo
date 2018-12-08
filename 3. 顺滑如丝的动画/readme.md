@@ -41,7 +41,7 @@ const animationFrame$ = Rx.Observable.interval(0, Rx.Scheduler.animationFrame);
 
 这里假设你看了代码，知道了`move$`是啥
 
-随着鼠标（手指）移动, `move$`会不断产生坐标值，但是只有在`animationFrame$`发出值后，接下来的`move$`值才是我们需要的
+随着鼠标（手指）移动, `move$`会不断产生坐标值，但是只有在`animationFrame$`发出值后，当前最新的`move$`值才是我们需要的
 
 这时，使用`withlatestFrom`
 
