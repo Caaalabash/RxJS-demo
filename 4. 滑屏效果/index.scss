@@ -1,0 +1,45 @@
+// 容器撑满屏幕
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  // 内部需要transition的元素设置will-change增强页面渲染性能
+  &__wrapper {
+    height: 100vh;
+    transition: all linear;
+    will-change: transform;
+  }
+
+  &__btn {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    border: 0;
+    background: none;
+    width: 7vw;
+    cursor: pointer;
+    outline: 0;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  // 每一屏占满, 通过float改变排列
+  &__item {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+    line-height: 100vh;
+    font-size: 40vh;
+    text-align: center;
+  }
+}
+
+
+
