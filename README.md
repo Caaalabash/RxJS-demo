@@ -32,11 +32,21 @@
 
 ![](https://blog.calabash.top/file-1544272268388.gif)
 
+## 5. 里程表效果
+
+[智能计数器](https://rxjs-cn.github.io/learn-rxjs-operators/recipes/smartcounter.html)
+
+效果
+
+![](https://blog.calabash.top/file-1544339866792.gif)
+
 ## 涉及到的操作符
 
 ### 创建类
 
 + fromEvent
+
++ timer
 
 ### 转化类
 
@@ -45,6 +55,8 @@
 + mapTo
 
 + concatMap
+
++ switchMap
 
 + scan
 
@@ -57,6 +69,8 @@
 + takeUntil
 
 + distinctUntilChanged
+
++ takeWhile
 
 ### 合并类
 
@@ -78,7 +92,7 @@
 
 ### 辅助工具类
 
-无
++ do
 
 ### 条件分支类
 
