@@ -40,6 +40,14 @@
 
 ![](https://blog.calabash.top/file-1544339866792.gif)
 
+## 6. 上上下下左右左右BABA
+
+按键: 上上下下左右左右BABA, 记录用时
+
+效果截图
+
+![](https://blog.calabash.top/file-1544447631454.png)
+
 ## 涉及到的操作符
 
 ### 创建类
@@ -47,6 +55,8 @@
 + fromEvent
 
 + timer
+
++ from
 
 ### 转化类
 
@@ -56,9 +66,15 @@
 
 + concatMap
 
++ mergeMap
+
 + switchMap
 
 + scan
+
++ windowCount
+
++ buffer
 
 ### 过滤类
 
@@ -96,7 +112,7 @@
 
 ### 条件分支类
 
-无
++ sequenceEqual
 
 ### 数学和合计类
 
