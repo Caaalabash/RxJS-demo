@@ -64,6 +64,8 @@
 
 + mapTo
 
++ pluck
+
 + concatMap
 
 + mergeMap

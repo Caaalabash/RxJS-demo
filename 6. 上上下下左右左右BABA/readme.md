@@ -44,7 +44,7 @@ source$.buffer(notifier$)
 
 ````
 const keyup$ = Rx.Observable.fromEvent(document, 'keyup')
-  .map(ev => ev.which)
+  .pluck('which')
   // 略
 ````
 
@@ -69,6 +69,25 @@ source$.windowCount(缓存个数, 间隔距离)
 
 判定两个 `Observable` 是否发射相同的数据序列，传递两个 `Observable` 给 `sequenceEqual` 操作符时，它会比较两个 `Observable` 的发射物，
 如果两个序列相同(相同的数据，相同的顺序，相同的终止状态)，则发射 `true`，否则发射 `false`。
+
+### pluck: 对象取值
+
+`pluck`操作符用于从对象中取值，还是很强大的
+
++ 多个参数实现嵌套取值
+
++ 自动处理字段不存在的情况
+
++ 只能取出一个字段
+
+````
+const keyup$ = Rx.Observable.fromEvent(document, 'keyup')
+  .pluck('which')
+
+// 等价于
+const keyup$ = Rx.Observable.fromEvent(document, 'keyup')
+  .map(ev => ev.which)
+````
 
 ## shit
 
