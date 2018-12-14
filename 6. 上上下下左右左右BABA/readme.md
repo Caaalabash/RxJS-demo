@@ -89,7 +89,32 @@ const keyup$ = Rx.Observable.fromEvent(document, 'keyup')
   .map(ev => ev.which)
 ````
 
-## shit
+### zip: 拉链式组合
 
-这段代码中做的最差的一点可能就是申明了一个全局变量`end`, 目前学艺不精, 不知道怎么做了
+````
+const zip$ = Rx.Observable.zip(souce1$, source2$, (value1, value2) => [value, value2])
+````
 
+非常直观，工作方式如同拉链: **拉动拉片，两边的链齿被牵动，一对一咬合**
+
+看看同步的例子
+
+````
+const source1$ = Rx.Observable.of(1, 2, 3)
+const source2$ = Rx.Observable.of('a', 'b', 'c')
+
+const zip$ = Rx.Observable.zip(source1$, source$2)
+  .subscribe(console.log)
+````
+
+输出
+
+````
+[1, 'a']
+[2, 'b']
+[3, 'c']
+````
+
+对于异步来说，也是一样的效果，值得注意的是： **任意一个上游的Observable完结，便会让zip产生的observable完结**
+
+他还有第三个参数：**这个函数被用来计算最终发出的值，否则返回一个顺序包含所有输入值的数组**

@@ -15,11 +15,7 @@ const keydown$ = Rx.Observable.fromEvent(document, 'keydown')
   .buffer(keyup$)
   .map(x => x.slice(-12, -11)[0])
 
-// shit
-let end = ''
-
-keyup$.subscribe(endTime => end = endTime)
-
-keydown$.subscribe(startTime => {
-  alert(`用时${(end - startTime)/1000}s`)
-})
+const result$ = Rx.Observable.zip(keyup$, keydown$, (end, start) => end - start)
+  .subscribe((useage) => {
+    alert(`用时${useage/1000}s`)
+  })
