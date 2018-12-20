@@ -52,6 +52,16 @@
 
 深入浅出RxJS第15章实例
 
+## 8. RxJS协同编辑表格
+
+效果截图
+
+![](https://blog.calabash.top/file-1545318271455.gif)
+
+参考
+
+[xxapp - rxjs-excel](https://github.com/xxapp/rxjs-excel)
+
 ## 涉及到的操作符
 
 ### 创建类
