@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="[测试反应速度]">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://unpkg.com/@reactivex/rxjs@5.0.3/dist/global/Rx.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    div {
+      width: 71px;
+      height: 34px;
+      margin-left: 40px;
+      border-radius: 7px;
+      background: #007aff;
+      font-size: 14px;
+      text-align: center;
+      line-height: 34px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .no-click {
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+<div id="start">开始</div>
+<div id="end">结束</div>
+<script src="index.js"></script>
+</body>
+</html>

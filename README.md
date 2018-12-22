@@ -62,6 +62,12 @@
 
 [xxapp - rxjs-excel](https://github.com/xxapp/rxjs-excel)
 
+### 9. 反应力测试
+
+效果截图
+
+![](https://blog.calabash.top/file-1545481222004.gif)
+
 ## 涉及到的操作符
 
 ### 创建类
