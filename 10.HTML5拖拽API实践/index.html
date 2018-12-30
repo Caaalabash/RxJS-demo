@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .pane {
+      display: flex;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-left: 30px;
+      background: gray;
+    }
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      border: 1px dashed black;
+    }
+    .content {
+      width: 71px;
+      height: 34px;
+      border-radius: 7px;
+      background: #007aff;
+      font-size: 14px;
+      text-align: center;
+      line-height: 34px;
+      color: #fff;
+      cursor: pointer;
+      /* 避免拖动文本 */
+      -webkit-user-select:none;
+    }
+    .draging {
+      opacity: 0.5;
+    }
+    .dragover {
+      background: white;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.5.2/Rx.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <div class="pane">
+    <div class="column">
+      <h2>待开发</h2>
+      <div class="cell">
+        <div class="content" draggable="true">
+          可拖动A
+        </div>
+      </div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="column">
+      <h2>开发中</h2>
+      <div class="cell">
+        <div class="content" draggable="true">
+          可拖动B
+        </div>
+      </div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="column">
+      <h2>待测试</h2>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="column">
+      <h2>测试中</h2>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="column">
+      <h2>已完成</h2>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+  </div>
+</body>
+</html>
